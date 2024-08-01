@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+
+    <title>KKilook</title>
+    <script src="https://kit.fontawesome.com/259472804d.js" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet"> 
+</head>
+{% include 'header.html' %}
+<body>
+
+    <h1>{{title}}</h1>
+
+        
+
+
+    <main>
+        <div class="slidebox">
+            <input type="radio" name="slide" id="slide01" checked>
+            <input type="radio" name="slide" id="slide02" >
+            <input type="radio" name="slide" id="slide03" >
+            <input type="radio" name="slide" id="slide04" >
+            <ul class="slidelist">
+                <li class="slideitem">
+                    <div>
+                        <label for="slide04" class="left"></label>
+                        <label for="slide02" class="right"></label>
+                        <a href="#"><img src="https://busandabom.net/upload/%EB%8D%94%ED%85%8C%ED%81%AC.jpg" alt=""></a>
+                    </div>
+                </li>
+                <li class="slideitem">
+                    <div>
+                        <label for="slide01" class="left"></label>
+                        <label for="slide03" class="right"></label>
+                        <a href="#"><img src="" alt=""></a>
+                    </div>
+                </li>
+                <li class="slideitem">
+                    <div>
+                        <label for="slide04" class="left"></label>
+                        <label for="slide02" class="right"></label>
+                        <a href="#"><img src="" alt=""></a>
+                    </div>
+                </li>
+                <li class="slideitem">
+                    <div>
+                        <label for="slide04" class="left"></label>
+                        <label for="slide02" class="right"></label>
+                        <a href="#"><img src="" alt=""></a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </main>
+
+    <footer></footer>
+
+</body>
+</html>

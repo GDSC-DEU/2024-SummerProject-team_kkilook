@@ -1,0 +1,168 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    color: #000;
+}
+
+body{
+    width: 100vh;
+    height: 100%;
+    margin: 0 auto;
+}
+p{
+    font-size: 2rem;
+    font-weight: bold;
+    color: rgb(53, 50, 162);
+}
+header{
+    /* border: 1px solid #000; */
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* 로고 */
+.logo, .search, .icon{
+    margin-top: 30px;
+}
+
+.logo{
+    display: flex;
+}
+/* 로고 끝 */
+
+
+
+/* 검색창 */
+.search{
+    text-align: center;
+    width: 300px;
+    /* border: 1px solid #000; */
+    border-bottom: 1px solid rgb(123, 123, 123);
+}
+.search > input{
+    width: 250px;
+    height: 40px;
+    border: none;
+}
+/* 검색창 끝 */
+
+/* 왼쪽 끝 아이콘들 */
+.icon{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    padding: 18px;
+}
+/* 아이콘 끝 */
+
+
+
+/* Menu */
+#mainMenu{
+    margin-top: 50px;
+    display: flex;
+    border-bottom: 2px solid rgb(42, 73, 185);
+    position: relative;
+}
+#mainMenu > li{
+    /* border: 1px solid #000; */
+    width: 100%;
+}
+#mainMenu > li > a{
+    /* border: 1px solid #000; */
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.3rem;
+    padding: 8px 23px;
+}
+#mainMenu > li > a:hover,
+#subMenu > li > a:hover{
+    font-weight: bold;
+    color: rgb(53, 50, 162);
+}
+
+
+#subMenu{
+    width: 100vh;
+    position: absolute;
+    left: 0;
+    display: none;
+    border: 1px solid #000;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.11rem;
+    background: #fff;
+    z-index: 99;
+}
+#subMenu > li > a{
+    line-height: 2.1; /*서브메뉴 간격 조정*/
+}
+
+/* 골라보는 여행지 올렸을때 서브메뉴 보이기 */
+.trip:hover  #subMenu{
+    display: block;
+}
+
+/* Menu 끝 */
+
+
+main{
+    width: 100vh;
+    border: 1px solid #000;
+    margin-top: 50px;
+}
+
+[name="slide"] {
+    display: none;
+}
+.slidebox{
+    max-width: 100vh;
+    max-height: 60vh;
+    width: 100%;
+
+}
+.slidebox  img{
+    width: 100vh;
+    height: 50vh;
+}
+.slidebox .slidelist{
+    white-space: nowrap;
+    font-size: 0;
+    overflow: hidden;
+}
+.slidebox  .slideitem{
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    transition: all .35s;
+}
+.slidebox  .slideitem  label{
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+label.left{
+    left: 20px;
+    background-color: #5f5f5f;
+    background-image:url(https://icons.veryicon.com/png/o/internet--web/linear-icon-1/left-arrow-9.png) ;
+    background-position: center center;
+    block-size: 50%;
+    background-repeat: no-repeat;
+}
+label.right{
+    right: 20px;
+    background-color: #ffffff;
+    background-image:url(https://icons.veryicon.com/png/o/internet--web/linear-icon-1/right-arrow-11.png) ;
+    background-position: center center;
+    block-size: 20%;
+    background-repeat: no-repeat;
+}
