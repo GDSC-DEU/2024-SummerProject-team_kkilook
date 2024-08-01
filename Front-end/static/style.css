@@ -61,6 +61,8 @@ header{
 
 
 /* Menu */
+
+
 #mainMenu{
     margin-top: 50px;
     display: flex;
@@ -68,11 +70,9 @@ header{
     position: relative;
 }
 #mainMenu > li{
-    /* border: 1px solid #000; */
     width: 100%;
 }
 #mainMenu > li > a{
-    /* border: 1px solid #000; */
     display: block;
     text-align: center;
     text-decoration: none;
@@ -97,6 +97,7 @@ header{
     font-size: 1.11rem;
     background: #fff;
     z-index: 99;
+    
 }
 #subMenu > li > a{
     line-height: 2.1; /*서브메뉴 간격 조정*/
@@ -106,6 +107,8 @@ header{
 .trip:hover  #subMenu{
     display: block;
 }
+
+
 
 /* Menu 끝 */
 
