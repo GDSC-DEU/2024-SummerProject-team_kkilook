@@ -151,13 +151,13 @@ main{
     top: 50%;
     transform: translateY(-50%);
     padding: 20px;
-    border-radius: 50%;
+    border-radius: 20%;
     cursor: pointer;
 }
 label.left{
     left: 20px;
     background-color: #fff;
-    background-image:url(/Front-end/templates/img/left-arrow-9.png) ;
+    background-image:url("https://www.svgrepo.com/show/238293/left-arrow-next.svg") ;
     background-position: center center;
     block-size: 5%;
     background-repeat: no-repeat;
@@ -166,9 +166,9 @@ label.left{
 label.right{
     right: 20px;
     background-color: #fff;
-    background-image:url(https://icons.veryicon.com/png/o/internet--web/linear-icon-1/right-arrow-11.png) ;
+    background-image:url("https://www.svgrepo.com/show/238285/right-arrow-next.svg") ;
     background-position: center center;
-    block-size: 5%;
+    block-size: 10%;
     background-repeat: no-repeat;
     background-size: contain;
 }
