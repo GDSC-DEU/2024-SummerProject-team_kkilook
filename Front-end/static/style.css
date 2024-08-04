@@ -8,8 +8,7 @@
 }
 
 body{
-    width: 100vh;
-    height: 100%;
+    width: 150vh;
     margin: 0 auto;
 }
 p{
@@ -87,11 +86,10 @@ header{
 
 
 #subMenu{
-    width: 100vh;
+    width: 150vh;
     position: absolute;
     left: 0;
     display: none;
-    border: 1px solid #000;
     text-align: center;
     padding: 20px;
     font-size: 1.11rem;
@@ -114,24 +112,26 @@ header{
 
 
 main{
-    width: 100vh;
+    width: 150vh;
     border: 1px solid #000;
     margin-top: 50px;
 }
 
 
+/* 슬라이드 */
 [name="slide"] {
     display: none;
 }
 .slidebox{
-    max-width: 100vh;
+    max-width: 150vh;
     max-height: 60vh;
     width: 100%;
-
+    display: flex;
+    text-align: center;
 }
 .slidebox  img{
-    width: 100vh;
-    height: 50vh;
+    width: 145vh;
+    height: 60vh;
 }
 .slidebox .slidelist{
     white-space: nowrap;
@@ -151,31 +151,33 @@ main{
     top: 50%;
     transform: translateY(-50%);
     padding: 20px;
-    border-radius: 20%;
+    /* border-radius: 20%; */
     cursor: pointer;
 }
 label.left{
     left: 20px;
-    background-color: #fff;
     background-image:url("https://www.svgrepo.com/show/238293/left-arrow-next.svg") ;
     background-position: center center;
-    block-size: 5%;
+    block-size: 100%;
     background-repeat: no-repeat;
     background-size: contain;
+    left: 0;
 }
 label.right{
     right: 20px;
-    background-color: #fff;
     background-image:url("https://www.svgrepo.com/show/238285/right-arrow-next.svg") ;
     background-position: center center;
-    block-size: 10%;
+    block-size: 100%;
     background-repeat: no-repeat;
     background-size: contain;
+    right: 0;
 }
 label.right:hover,
 label.left:hover{
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.2);
 }
+
+/* 슬라이드 애니메이션 */
 [id="slide01"]:checked ~ .slidelist .slideitem {transform:translateX(0); animation:slide01 20s infinite;}
 [id="slide02"]:checked ~ .slidelist .slideitem {transform:translateX(-100%); animation:slide02 20s infinite;}
 [id="slide03"]:checked ~ .slidelist .slideitem {transform:translateX(-200%); animation:slide03 20s infinite;}
@@ -225,3 +227,22 @@ label.left:hover{
     98%{left: 100%}
     100%{left: -0%}
 }
+
+
+/* List */
+
+#heartRank, #KKilookpush{
+    margin-top: 150px;
+    width: 150vh;
+}
+
+#List{
+    display: flex;
+    justify-content: space-evenly;
+}
+.listMenu{
+    width: 200px;
+    height: 350px;
+    border: 1px solid #000;
+}
+

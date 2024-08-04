@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="/Front-end/static/style.css">
 
     <title>KKilook</title>
     <script src="https://kit.fontawesome.com/259472804d.js" crossorigin="anonymous"></script>
@@ -17,6 +18,7 @@
     <h1>{{title}}</h1>
 
     <main>
+        <!-- 슬라이드 -->
         <div class="slidebox">
             <input type="radio" name="slide" id="slide01" checked>
             <input type="radio" name="slide" id="slide02" >
@@ -53,6 +55,27 @@
                 </li>
             </ul>
         </div>
+
+
+        
+        
+        <div id="heartRank">
+            <p># 찜 랭킹</p>
+            {% for i in range(4) %}
+            <div id="List">
+                <a href="#">
+                    <div class="listMenu"> 
+                        <img src="https://visualpharm.com/assets/537/Image-595b40b85ba036ed117dc1b2.svg" alt="">
+                        <i class="fa-regular fa-heart fa-xl"></i>
+                        <div class="title">장소 이름</div>
+                        <div class="explain">설명</div>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div id="KKilookpush"></div>
     </main>
 
     <footer></footer>
