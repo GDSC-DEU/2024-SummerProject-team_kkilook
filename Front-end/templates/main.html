@@ -1,61 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
     <title>KKilook</title>
-    <script src="https://kit.fontawesome.com/259472804d.js" crossorigin="anonymous"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet"> 
-</head>
-
-{% include 'header.html' %}
-
-<body>
+    <script
+      src="https://kit.fontawesome.com/259472804d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    {% include 'header.html' %}
 
     <h1>{{title}}</h1>
-
     <main>
-        <div class="slidebox">
-            <input type="radio" name="slide" id="slide01" checked>
-            <input type="radio" name="slide" id="slide02" >
-            <input type="radio" name="slide" id="slide03" >
-            <input type="radio" name="slide" id="slide04" >
-            <ul class="slidelist">
-                <li class="slideitem">
-                    <div>
-                        <label for="slide04" class="left"></label>
-                        <label for="slide02" class="right"></label>
-                        <a href="#"><img src="https://busandabom.net/upload/%EB%8D%94%ED%85%8C%ED%81%AC.jpg" alt="168 더 테크"></a>
-                    </div>
-                </li>
-                <li class="slideitem">
-                    <div>
-                        <label for="slide01" class="left"></label>
-                        <label for="slide03" class="right"></label>
-                        <a href="#"><img src="https://www.visitbusan.net/upload_data/board_data/BBS_0000009/172077259045930.jpg" alt="FLY 아세안 차세대 감독 영화 상영회"></a>
-                    </div>
-                </li>
-                <li class="slideitem">
-                    <div>
-                        <label for="slide02" class="left"></label>
-                        <label for="slide04" class="right"></label>
-                        <a href="#"><img src="https://www.visitbusan.net/upload_data/board_data/BBS_0000009/172040567441328.jpg" alt="부산국제코미니페스티벌"></a>
-                    </div>
-                </li>
-                <li class="slideitem">
-                    <div>
-                        <label for="slide03" class="left"></label>
-                        <label for="slide01" class="right"></label>
-                        <a href="#"><img src="https://www.visitbusan.net/upload_data/board_data/BBS_0000009/171444031986567.jpg" alt="도라에몽  in Busan"></a>
-                    </div>
-                </li>
-            </ul>
-        </div>
+      <div class="slidebox">
+        <input type="radio" name="slide" id="slide01" checked />
+        <input type="radio" name="slide" id="slide02" />
+        <input type="radio" name="slide" id="slide03" />
+        <input type="radio" name="slide" id="slide04" />
+        <ul class="slidelist">
+          <li class="slideitem">
+            <div>
+              <label for="slide04" class="left"></label>
+              <label for="slide02" class="right"></label>
+              <a href="#">
+                <img
+                  src="https://busandabom.net/upload/%EB%8D%94%ED%85%8C%ED%81%AC.jpg"
+                  alt="168 더 테크"
+                />
+              </a>
+            </div>
+          </li>
+          <li class="slideitem">
+            <div>
+              <label for="slide01" class="left"></label>
+              <label for="slide03" class="right"></label>
+              <a href="#">
+                <img
+                  src="https://www.visitbusan.net/upload_data/board_data/BBS_0000009/172077259045930.jpg"
+                  alt="FLY 아세안 차세대 감독 영화 상영회"
+                />
+              </a>
+            </div>
+          </li>
+          <li class="slideitem">
+            <div>
+              <label for="slide02" class="left"></label>
+              <label for="slide04" class="right"></label>
+              <a href="#">
+                <img
+                  src="https://www.visitbusan.net/upload_data/board_data/BBS_0000009/172040567441328.jpg"
+                  alt="부산국제코미니페스티벌"
+                />
+              </a>
+            </div>
+          </li>
+          <li class="slideitem">
+            <div>
+              <label for="slide03" class="left"></label>
+              <label for="slide01" class="right"></label>
+              <a href="#">
+                <img
+                  src="https://www.visitbusan.net/upload_data/board_data/BBS_0000009/171444031986567.jpg"
+                  alt="도라에몽  in Busan"
+                />
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
     </main>
-
-    <footer></footer>
-
-</body>
+    <footer class="footer">
+      <div class="footer-content">
+        <p>Copyright © 2024 KKilook All rights reserved</p>
+        <div class="contributors">
+          <p>깃허브</p>
+          <ul>
+            <li>송녕경: nyeonggyeong</li>
+            <li>강보민: borbbo</li>
+            <li>김민경: mnmn05</li>
+            <li>김민석: minseok419</li>
+            <li>신유진: syj318</li>
+          </ul>
+        </div>
+        <div class="gdsc-logo">
+          <img src="gds-logo.png" alt="Google Developer Student Clubs" />
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
