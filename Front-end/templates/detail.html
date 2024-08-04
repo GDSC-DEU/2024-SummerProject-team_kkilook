@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kkilook : 부산관광은 끼룩</title>
+    <link rel="stylesheet" href="detail.css" />
+  </head>
+  <body>
+    <img src="logo.png" alt="logo" class="logo" />
+
+    <div class="search">
+      <input type="text" name="query" value="" />
+      <button type="submit"><img src="search.png" alt="search" /></button>
+    </div>
+    <div class="icons">
+      <img src="weather.png" alt="Weather" class="icon" />
+      <img src="heart.png" alt="Heart" class="icon" />
+      <img src="profile.png" alt="Profile" class="icon" />
+    </div>
+    <h1 class="inline-block-text"># 이달의 행사</h1>
+    <h1 class="inline-block-text"># 골라보는 여행지</h1>
+    <h1 class="inline-block-text"># 매체 쏙! 부산</h1>
+    <hr class="thick-line" />
+
+    <h1 class="place">광안리 해수욕장</h1>
+    <button class="heart-btn active" onclick="toggleFavorite(this)">♥</button>
+
+    <div class="container">
+      <div class="card">
+        <img src="placeholder.png" alt="Place Image" />
+      </div>
+    </div>
+    <div class="content">
+      <div class="section">
+        <div class="section-title">
+          설명: 어떠한 곳인지, 주로 무엇을 할 수 있는 곳인지
+        </div>
+      </div>
+      <div class="section">
+        <div class="section-title">정보: 운영시간, 이용 요금, 교통정보 등</div>
+      </div>
+      <div class="section">
+        <div class="section-title">주소:</div>
+        <div class="map-image">
+          <img src="map-image.png" alt="Map Image" />
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <p>Copyright © 2024 KKilook All rights reserved</p>
+        <div class="contributors">
+          <p>깃허브</p>
+          <ul>
+            <li>송녕경: nyeonggyeong</li>
+            <li>강보민: borbbo</li>
+            <li>김민경: mnmn05</li>
+            <li>김민석: minseok419</li>
+            <li>신유진: syj318</li>
+          </ul>
+        </div>
+        <div class="gdsc-logo">
+          <img src="gds-logo.png" alt="Google Developer Student Clubs" />
+        </div>
+      </div>
+    </footer>
+    <script src="detail.js"></script>
+  </body>
+</html>
