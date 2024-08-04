@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='header.css') }}">
     <title>Document</title>
 </head>
 <body>
@@ -17,7 +18,7 @@
             <i class="fa-solid fa-magnifying-glass fa-lg" style="color: #616161;"></i>
         </div>
 
-        <div class="icon">
+        <div id="icon">
             <a href="#"><i class="fa-solid fa-cloud fa-xl"></i></a> <!-- 날씨 -->
             <a href="{{ url_for('heart')}}"><i class="fa-regular fa-heart fa-xl"></i></a><!-- 하트 -->
             <a href="#"><i class="fa-brands fa-github fa-xl"></i></a> <!-- 깃허브 -->

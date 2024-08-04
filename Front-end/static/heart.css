@@ -1,5 +1,5 @@
 /* Existing CSS */
-.logo {
+/* .logo {
   margin-left: 30px;
   margin-top: 10px;
   width: 290px;
@@ -62,7 +62,7 @@
   background-color: #3428dc;
   border: none;
   margin-left: 20px 0;
-}
+} */
 
 .heart {
   font-size: 39px;
@@ -179,14 +179,14 @@
   font-weight: bold;
 }
 
-.footer {
+/* .footer {
   background-color: #e0e0e0;
   text-align: center;
   position: relative;
   width: 100%;
-}
+} */
 
-.footer-content {
+/* .footer-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -219,7 +219,7 @@
   max-height: 60px;
   margin-bottom: 15px;
   margin-left: 300px;
-}
+} */
 
 @media (max-width: 600px) {
   .footer-content {
@@ -231,3 +231,9 @@
     text-align: center;
   }
 }
+
+
+
+
+
+
