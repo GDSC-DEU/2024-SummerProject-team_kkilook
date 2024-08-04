@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 from flask import Flask, render_template, send_from_directory
 
 app = Flask(__name__, template_folder='Front-end/templates', static_folder='Front-end/static')
@@ -6,19 +5,14 @@ app = Flask(__name__, template_folder='Front-end/templates', static_folder='Fron
 @app.route('/Front-end/static/<path:filename>')
 def custom_static(filename):
     return send_from_directory(app.static_folder, filename)
-
-=======
 from flask import Flask, render_template
 
-app = Flask(__name__, template_folder='Front-end/templates', static_folder='Front-end/static')
->>>>>>> Stashed changes
 app.config['DEBUG'] = True
 
 @app.route("/")
 def hello():
     return render_template("main.html", title="Jinja test1")
 
-<<<<<<< Updated upstream
 @app.route("/heart")
 def heart():
     return render_template("heart.html")
@@ -30,11 +24,8 @@ def month():
 @app.route("/medium")
 def medium():
     return render_template("medium.html")
-=======
-@app.route("/test")
-def home():
-    return "Hello, Flask~~~"
->>>>>>> Stashed changes
+
+
 
 if __name__ == '__main__':
     app.run(debug=True, port=5001)

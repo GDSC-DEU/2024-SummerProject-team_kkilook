@@ -3,59 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< Updated upstream
     <script src="https://kit.fontawesome.com/259472804d.js"crossorigin="anonymous"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='header.css') }}">
 
     <link rel="stylesheet" href="/Front-end/static/header.css">
 
-=======
->>>>>>> Stashed changes
+
     <title>Document</title>
 </head>
 <body>
     <header>
-<<<<<<< Updated upstream
+
         <div id="logo">
-            <a href="{{ url_for('main') }}"><img src="{{ url_for('static', filename='img/logo.png') }}"></a>
-=======
-        <div class="logo">
-        <!-- <img src="" alt="" class="logo"> -->
-            <p>KKilook</p>
->>>>>>> Stashed changes
+            <a href="{{ url_for('main') }}">
+                <img src="{{ url_for('static', filename='img/logo.png') }}">
+            </a>
         </div>
 
-        <div class="search">
+        <div id="search">
             <input type="text" placeholder="검색어를 입력해주세요">
             <i class="fa-solid fa-magnifying-glass fa-lg" style="color: #616161;"></i>
         </div>
 
-<<<<<<< Updated upstream
+
         <div id="icon">
             <a href="#"><i class="fa-solid fa-cloud fa-xl"></i></a>
             <a href="{{ url_for('heart') }}"><i class="fa-regular fa-heart fa-xl"></i></a>
             <a href="https://github.com/GDSC-DEU/2024-SummerProject-team_kkilook"><i class="fa-brands fa-github fa-xl"></i></a>
-=======
-        <div class="icon">
-            <a href="#"><i class="fa-solid fa-cloud fa-xl"></i></a>
-            <a href="#"><i class="fa-regular fa-heart fa-xl"></i></a>
-            <a href="#"><i class="fa-brands fa-github fa-xl"></i></a>
->>>>>>> Stashed changes
-        </div>
+        </div>  
+
 </header>
         <nav>
             <ul id="mainMenu">
                 <div class="bg"></div>
-<<<<<<< Updated upstream
                 <li><a href="{{ url_for('month') }}"># 이달의 행사</a> 
-=======
-<<<<<<< HEAD
-                <li><a href="{{ url_for('month')}}"># 이달의 행사</a></li>
-=======
-                <li><a href="#"># 이달의 행사</a> 
->>>>>>> ca730b1794f5566ac4b1b50935c2b24bbc52d978
->>>>>>> Stashed changes
                 <li class="trip"><a href="#"># 골라보는 여행지</a> 
                     <ul id="subMenu">
                         <li><a href="#"># 계절별 여행지</a></li>
@@ -65,11 +47,8 @@
                         <li><a href="#"># 아이 동반 여행</a></li>
                         <li><a href="#"># 끼룩이의 추천</a></li>
                     </ul>
-<<<<<<< Updated upstream
                 <li><a href="{{ url_for('medium') }}"># 매체 쏙! 부산</a></li>
-=======
-                <li><a href="#"># 매체 쏙! 부산</a></li>
->>>>>>> Stashed changes
-        </nav>             
+        </nav>       
+
 </body>
 </html>
