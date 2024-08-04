@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='footer.css') }}"
+    />
+    <link rel="stylesheet" href="/Front-end/static/footer.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <footer class="footer">
+      <div class="footer-content">
+        <p>Copyright © 2024 KKilook All rights reserved</p>
+        <div class="contributors">
+          <p>깃허브</p>
+          <ul>
+            <li>송녕경: nyeonggyeong</li>
+            <li>강보민: borbbo</li>
+            <li>김민경: mnmn05</li>
+            <li>김민석: minseok419</li>
+            <li>신유진: syj318</li>
+          </ul>
+        </div>
+        <div class="gdsc-logo">
+          <img src="{{ url_for('static', filename='img/gdsc-logo.png') }}" />
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
