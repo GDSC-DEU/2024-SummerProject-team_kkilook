@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>매체 쏙! 부산</title>
-    <link rel="stylesheet" href="medium.css">
+    <title>Kkilook : 부산관광은 끼룩</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='medium.css') }}">
 </head>
     
-{% include 'header.html' %}
+
     
 <body>
-    <h1># 매체 쓱! 부산</h1>
+    {% include 'header.html' %}
+
+    <h1># 매체 쏙! 부산</h1>
     <div class="subtitle">
         아름다운 해변, 맛있는 음식, 그리고 풍부한 문화로 가득한 곳!<br>
         잊지 못할 여행의 순간을 선사하는 부산!<br>
@@ -42,5 +44,7 @@
             <p class="card-title">#  쓱!</p>
         </div>
     </div>
+
+    {% include 'footer.html' %}
 </body>
 </html>

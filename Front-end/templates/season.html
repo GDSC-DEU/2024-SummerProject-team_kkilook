@@ -4,24 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kkilook : 부산관광은 끼룩</title>
-    <link rel="stylesheet" href="season.css" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='season.css') }}">
   </head>
   <body>
-    <img src="logo.png" alt="logo" class="logo" />
+    {% include 'header.html' %}
 
-    <div class="search">
-      <input type="text" name="query" value="" />
-      <button type="submit"><img src="search.png" alt="search" /></button>
-    </div>
-    <div class="icons">
-      <img src="weather.png" alt="Weather" class="icon" />
-      <img src="heart.png" alt="Heart" class="icon" />
-      <img src="profile.png" alt="Profile" class="icon" />
-    </div>
-    <h1 class="inline-block-text"># 이달의 행사</h1>
-    <h1 class="inline-block-text"># 골라보는 여행지</h1>
-    <h1 class="inline-block-text"># 매체 쏙! 부산</h1>
-    <hr class="thick-line" />
     <h1 class="season-list"># 계절별 여행지</h1>
     <p class="season">
       푸른 바다와 화려한 도시의 조화로 가슴이 시원해지는 곳 !<br />
@@ -168,25 +155,9 @@
         </div>
       </div>
     </div>
-    <footer class="footer">
-      <div class="footer-content">
-        <p>Copyright © 2024 KKilook All rights reserved</p>
-        <div class="contributors">
-          <p>깃허브</p>
-          <ul>
-            <li>송녕경: nyeonggyeong</li>
-            <li>강보민: borbbo</li>
-            <li>김민경: mnmn05</li>
-            <li>김민석: minseok419</li>
-            <li>신유진: syj318</li>
-          </ul>
-        </div>
-        <div class="gdsc-logo">
-          <img src="gds-logo.png" alt="Google Developer Student Clubs" />
-        </div>
-      </div>
-    </footer>
 
+
+    {% include 'footer.html' %}
     <script src="season.js"></script>
   </body>
 </html>

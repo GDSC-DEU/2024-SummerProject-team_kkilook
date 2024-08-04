@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>이달의 행사</title>
-    <link rel="stylesheet" href="month.css">
+    <title>Kkilook : 부산관광은 끼룩</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='month.css') }}">
 </head>
 
-{% include 'header.html' %}
+
 
 <body>
+    {% include 'header.html' %}
     
     <div class="container">
         <h1># 이달의 행사</h1>
@@ -52,7 +53,7 @@
         </div>
     </div>
 
-    <footer></footer>
+    {% include 'footer.html' %}
 
 </body>
 </html>
