@@ -18,15 +18,15 @@
         </div>
 
         <div class="icon">
-            <a href="#"><i class="fa-solid fa-cloud fa-xl"></i></a>
-            <a href="#"><i class="fa-regular fa-heart fa-xl"></i></a>
-            <a href="#"><i class="fa-brands fa-github fa-xl"></i></a>
+            <a href="#"><i class="fa-solid fa-cloud fa-xl"></i></a> <!-- 날씨 -->
+            <a href="{{ url_for('heart')}}"><i class="fa-regular fa-heart fa-xl"></i></a><!-- 하트 -->
+            <a href="#"><i class="fa-brands fa-github fa-xl"></i></a> <!-- 깃허브 -->
         </div>
 </header>
         <nav>
             <ul id="mainMenu">
                 <div class="bg"></div>
-                <li><a href="month.html"># 이달의 행사</a> 
+                <li><a href="{{ url_for('month')}}"># 이달의 행사</a> 
                 <li class="trip"><a href="#"># 골라보는 여행지</a> 
                     <ul id="subMenu">
                         <li><a href="#"># 계절별 여행지</a></li>
@@ -36,7 +36,7 @@
                         <li><a href="#"># 아이 동반 여행</a></li>
                         <li><a href="#"># 끼룩이의 추천</a></li>
                     </ul>
-                <li><a href="medium.html"># 매체 쏙! 부산</a></li>
+                <li><a href="{{ url_for('medium')}}"># 매체 쏙! 부산</a></li>
         </nav>             
 </body>
 </html>

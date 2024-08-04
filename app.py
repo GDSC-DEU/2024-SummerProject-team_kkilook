@@ -12,6 +12,9 @@ def main():
 def heart():
     return render_template('heart.html')
 
+@app.route("/month")
+def month():
+    return render_template('month.html')
 
 if __name__ == '__main__':
     app.run(debug=True, port=5001)
