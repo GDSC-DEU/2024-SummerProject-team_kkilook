@@ -26,6 +26,5 @@ def medium():
     return render_template("medium.html")
 
 
-
 if __name__ == '__main__':
     app.run(debug=True, port=5001)
