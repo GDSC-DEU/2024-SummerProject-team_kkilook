@@ -16,11 +16,6 @@ p{
     font-weight: bold;
     color: rgb(53, 50, 162);
 }
-p{
-    font-size: 2rem;
-    font-weight: bold;
-    color: rgb(53, 50, 162);
-}
 
 header{
     /* border: 1px solid #000; */
@@ -29,25 +24,30 @@ header{
 }
 
 /* 로고 */
-.logo, .search, .icon{
+#logo, .search, .icon{
     margin-top: 30px;
 }
 
-.logo{
+#logo {
+    width: 200px;
     display: flex;
+}
+#logo > a > img{
+    width: 100%;
+    height: auto;
 }
 /* 로고 끝 */
 
 
 
 /* 검색창 */
-.search{
+#search{
     text-align: center;
     width: 300px;
     /* border: 1px solid #000; */
     border-bottom: 1px solid rgb(123, 123, 123);
 }
-.search > input{
+#search > input{
     width: 250px;
     height: 40px;
     border: none;
@@ -55,7 +55,7 @@ header{
 /* 검색창 끝 */
 
 /* 왼쪽 끝 아이콘들 */
-.icon{
+#icon{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 10px;
