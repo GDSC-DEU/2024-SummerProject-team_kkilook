@@ -9,13 +9,9 @@ from flask import Flask, render_template
 
 app.config['DEBUG'] = True
 
-@app.route("/")
+@app.route("/", endpoint='main')
 def hello():
     return render_template("main.html", title="Jinja test1")
-
-@app.route("/heart")
-def heart():
-    return render_template("heart.html")
 
 @app.route("/month")
 def month():
@@ -25,6 +21,9 @@ def month():
 def medium():
     return render_template("medium.html")
 
+@app.route("/heart")
+def heart():
+    return render_template("heart.html")
 
 if __name__ == '__main__':
     app.run(debug=True, port=5001)
