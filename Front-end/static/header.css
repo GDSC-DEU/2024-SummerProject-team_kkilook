@@ -49,7 +49,7 @@ header {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 10px;
-    padding: 18px;
+    padding-top: 40px;
 }
   
   /* Menu */
@@ -58,6 +58,7 @@ header {
     display: flex;
     border-bottom: 2px solid rgb(42, 73, 185);
     position: relative;
+
 }
   
 #mainMenu > li {
@@ -82,20 +83,31 @@ header {
     width: 150vh;
     position: absolute;
     left: 0;
-    display: none;
-    background: #fff;
+    height: 0;
+    overflow: hidden;
     text-align: center;
-    padding: 20px;
     font-size: 1.11rem;
     z-index: 99;
-    border-top: 2px solid rgb(53, 50, 162);
+
+    border-top: 2px solid rgb(42, 73, 185);
+    background: rgb(248, 249, 255)
+
 }
-#subMenu > li > a {
-    line-height: 2.1;
+
+#subMenu > li  {
+    line-height: 50px;
 }
-  
+
+.trip:hover{
+    transition-duration: 0.5s;
+}
+
   /* 골라보는 여행지 올렸을때 서브메뉴 보이기 */
-.trip:hover #subMenu {
+.trip:hover  #subMenu {
+    height: 300px;
+    transition-duration: 0.7s;
     display: block;
+    
+    
 }
 

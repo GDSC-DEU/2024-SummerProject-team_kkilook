@@ -5,13 +5,12 @@ app = Flask(__name__, template_folder='Front-end/templates', static_folder='Fron
 @app.route('/Front-end/static/<path:filename>')
 def custom_static(filename):
     return send_from_directory(app.static_folder, filename)
-from flask import Flask, render_template
 
 app.config['DEBUG'] = True
 
 @app.route("/", endpoint='main')
 def hello():
-    return render_template("main.html", title="Jinja test1")
+    return render_template("main.html")
 
 @app.route("/month")
 def month():
@@ -24,6 +23,14 @@ def medium():
 @app.route("/heart")
 def heart():
     return render_template("heart.html")
+
+@app.route("/detail")
+def detail():
+    return render_template('detail.html')
+
+@app.route("/season")
+def season():
+    return render_template('season.html')
 
 if __name__ == '__main__':
     app.run(debug=True, port=5001)
