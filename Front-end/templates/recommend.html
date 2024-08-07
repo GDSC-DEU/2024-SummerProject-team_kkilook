@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kkilook : 부산관광은 끼룩</title>
+    <link rel="stylesheet" href="/Front-end/static/recommend.css" />
+  </head>
+
+  <body>
+    {% include 'header.html' %}
+    <h1 class="recommend-list">끼룩이의 추천</h1>
+    <p class="list">끼룩이가 추천하는 부산 관광 핫플레이스!</p>
+
+    <div class="container">
+      <div class="card">
+        <img src="placeholder.png" alt="Place Image" />
+        <div class="info">
+          <p class="name">장소 이름</p>
+          <button class="heart-btn" onclick="toggleFavorite(this)">♡</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="placeholder.png" alt="Place Image" />
+        <div class="info">
+          <p class="name">장소 이름</p>
+          <button class="heart-btn" onclick="toggleFavorite(this)">♡</button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="placeholder.png" alt="Place Image" />
+        <div class="info">
+          <p class="name">장소 이름</p>
+          <button class="heart-btn" onclick="toggleFavorite(this)">♡</button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="placeholder.png" alt="Place Image" />
+        <div class="info">
+          <p class="name">장소 이름</p>
+          <button class="heart-btn" onclick="toggleFavorite(this)">♡</button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="placeholder.png" alt="Place Image" />
+        <div class="info">
+          <p class="name">장소 이름</p>
+          <button class="heart-btn" onclick="toggleFavorite(this)">♡</button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="placeholder.png" alt="Place Image" />
+        <div class="info">
+          <p class="name">장소 이름</p>
+          <button class="heart-btn" onclick="toggleFavorite(this)">♡</button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="placeholder.png" alt="Place Image" />
+        <div class="info">
+          <p class="name">장소 이름</p>
+          <button class="heart-btn" onclick="toggleFavorite(this)">♡</button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="placeholder.png" alt="Place Image" />
+        <div class="info">
+          <p class="name">장소 이름</p>
+          <button class="heart-btn" onclick="toggleFavorite(this)">♡</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="pagination-container">
+      <ul class="pagination">
+        <li class="page-item">
+          <a class="page-link" href="#" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+          </a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#" data-page="1">1</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#" data-page="2">2</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#" data-page="3">3</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- <footer class="footer">
+      <div class="footer-content">
+        <p>Copyright © 2024 KKilook All rights reserved</p>
+        <div class="contributors">
+          <p>깃허브</p>
+          <ul>
+            <li>송녕경: nyeonggyeong</li>
+            <li>강보민: borbbo</li>
+            <li>김민경: mnmn05</li>
+            <li>김민석: minseok419</li>
+            <li>신유진: syj318</li>
+          </ul>
+        </div>
+        <div class="gdsc-logo">
+          <img src="gds-logo.png" alt="Google Developer Student Clubs" />
+        </div>
+      </div>
+    </footer> -->
+
+    {% include 'footer.html' %}
+
+    <script src="script.js"></script>
+  </body>
+</html>

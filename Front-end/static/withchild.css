@@ -1,0 +1,224 @@
+.logo {
+  margin-left: 30px;
+  margin-top: 10px;
+  width: 290px;
+  height: 125px;
+}
+
+.search {
+  margin-left: 450px;
+  width: 600px;
+  height: 100px;
+  margin-top: 20px;
+  top: -75px;
+  position: relative;
+}
+
+.search input {
+  width: 80%;
+  height: 30px;
+  font-size: 18px;
+  border: none;
+  border-bottom: 2px black solid;
+}
+.search button {
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.search button img {
+  width: 30px;
+  height: 30px;
+}
+
+.icons {
+  display: flex;
+  justify-content: right;
+  margin-top: -190px;
+  margin-right: 80px;
+}
+
+.icon {
+  width: 45px;
+  height: 45px;
+  margin: 15px;
+}
+
+.inline-block-text {
+  display: inline-block;
+  font-size: 26px;
+  margin-right: 20px;
+  white-space: nowrap;
+  margin-top: 100px;
+  margin-left: 230px;
+}
+
+.thick-line {
+  width: 80%;
+  height: 4px;
+  background-color: #3428dc;
+  border: none;
+  margin-left: 20px 0;
+}
+
+.withchild-list {
+  font-size: 37px;
+  display: inline-block;
+  white-space: nowrap;
+  color: #2562fc;
+  margin-left: 600px;
+}
+
+.list {
+  font-size: 25px;
+  margin-top: -5px;
+  margin-left: 500px;
+  font-weight: bold;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(auto-fill, minmax(330px, auto));
+  gap: 10px;
+  height: 1000px;
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  margin-left: 30px;
+  margin-right: 20px;
+  margin-bottom: 30px;
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.info {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.name {
+  margin-bottom: 10px;
+  margin-left: 10px;
+  font-size: 17px;
+}
+
+.heart-btn {
+  background: none;
+  border: none;
+  font-size: 25px;
+  cursor: pointer;
+  color: black;
+}
+.heart-btn.active {
+  color: red;
+}
+
+.pagination-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.pagination {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+}
+
+.page-item {
+  margin: 0 5px;
+}
+
+.page-link {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #007bff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.page-link:hover {
+  background-color: #e9ecef;
+  color: #0056b3;
+}
+
+.page-item.active .page-link {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.page-link[aria-label="Previous"],
+.page-link[aria-label="Next"] {
+  font-weight: bold;
+}
+
+.footer {
+  background-color: #e0e0e0;
+  text-align: center;
+  position: relative;
+  width: 100%;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.footer p {
+  margin: 0;
+  color: #333;
+}
+
+.contributors {
+  text-align: left;
+}
+
+.contributors ul {
+  list-style: none;
+  padding: 50px;
+  margin: 10px;
+}
+
+.contributors ul li {
+  color: #333;
+}
+
+.gdsc-logo img {
+  max-height: 60px;
+  margin-bottom: 15px;
+  margin-left: 300px;
+}
+
+@media (max-width: 600px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contributors {
+    text-align: center;
+  }
+}
