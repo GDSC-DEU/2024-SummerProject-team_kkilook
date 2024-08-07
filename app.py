@@ -32,5 +32,19 @@ def detail():
 def season():
     return render_template('season.html')
 
+@app.route("/recommend")
+def recommend():
+    return render_template('recommend.html')
+
+@app.route("/withchild")
+def withchild():
+    return render_template('withchild.html')
+
+@app.route("/alone")
+def alone():
+    return render_template('alone.html')
+
+
+
 if __name__ == '__main__':
     app.run(debug=True, port=5001)

@@ -22,8 +22,12 @@
         </div>
 
         <div id="search">
-            <input type="text" placeholder="검색어를 입력해주세요">
-            <i class="fa-solid fa-magnifying-glass fa-lg" style="color: #616161;"></i>
+            <form action="" method="GET">
+                <input type="text" placeholder="검색어를 입력해주세요">
+                <button class="search-btn" type="submit">
+                    <i class="fa-solid fa-magnifying-glass fa-lg" style="color: #616161;"></i>
+                </button>
+            </form>
         </div>
 
 
@@ -41,11 +45,11 @@
                 <li class="trip"><a href="#"># 골라보는 여행지</a> 
                     <ul id="subMenu">
                         <li><a href="{{ url_for('season') }}"># 계절별 여행지</a></li>
-                        <li><a href="#"># 나 홀로 여행</a></li>
+                        <li><a href="{{url_for('alone')}}"># 나 홀로 여행</a></li>
                         <li><a href="#"># 데이트 코스</a></li>
                         <li><a href="#"># 반려동물과의 여행</a></li>
-                        <li><a href="#"># 아이 동반 여행</a></li>
-                        <li><a href="#"># 끼룩이의 추천</a></li>
+                        <li><a href="{{url_for('withchild')}}"># 아이 동반 여행</a></li>
+                        <li><a href="{{url_for('recommend')}}"># 끼룩이의 추천</a></li>
                     </ul>
                 <li><a href="{{ url_for('medium') }}"># 매체 쏙! 부산</a></li>
         </nav>       

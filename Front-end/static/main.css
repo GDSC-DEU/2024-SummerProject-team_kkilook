@@ -262,15 +262,16 @@ h2{
 }
 .heartImg{
   position: absolute;
-  width: 35px;
-  height: 35px;
   bottom: 0;
   right: 0;
   margin: 20px;
 }
-.heartImg > button{
-  width: 100%;
-  height: 100%;
+.heart-btn {
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: black;
 }
 
 .Ttit, .Stit{
