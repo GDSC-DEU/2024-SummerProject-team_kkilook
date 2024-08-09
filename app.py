@@ -54,5 +54,5 @@ def animal():
     return render_template('animal.html')
 
 
-if __name__ == '__main__':
-    app.run(debug=True, port=5001)
+# if __name__ == '__main__':
+#     app.run(debug=True, port=5001)
