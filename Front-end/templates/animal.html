@@ -1,105 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Kkilook : 부산관광은 끼룩</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='animal.css') }}">
-    
-  </head>
-
-  <body>
+</head>
+<body>
     {% include 'header.html' %}
-    <h1 class="withchild-list">아이 동반 관광지</h1>
-    <p class="list">아이들과 함께 즐길 수 있는 부산 대표 관광지!</p>
 
-    <div class="container">
-      <div class="card">
-        <img src="placeholder.png" alt="Place Image" />
-        <div class="info">
-          <p class="name">장소 이름</p>
-          <button class="heart-btn" onclick="toggleFavorite(this)">♡</button>
-        </div>
-      </div>
+    <h1 class="withchild-list"># 반려 동물과의 여행</h1>
+    <p class="list">      
+      푸른 바다와 화려한 도시의 조화로 가슴이 시원해지는 곳 !<br />
+      매일매일 새로운 매력을 발견할 수 있는 부산으로<br />
+      지금 바로 떠나보세요 !
 
-      <div class="card">
-        <img src="placeholder.png" alt="Place Image" />
-        <div class="info">
-          <p class="name">장소 이름</p>
-          <button class="heart-btn" onclick="toggleFavorite(this)">♡</button>
-        </div>
-      </div>
-      <div class="card">
-        <img src="placeholder.png" alt="Place Image" />
-        <div class="info">
-          <p class="name">장소 이름</p>
-          <button class="heart-btn" onclick="toggleFavorite(this)">♡</button>
-        </div>
-      </div>
-      <div class="card">
-        <img src="placeholder.png" alt="Place Image" />
-        <div class="info">
-          <p class="name">장소 이름</p>
-          <button class="heart-btn" onclick="toggleFavorite(this)">♡</button>
-        </div>
-      </div>
-      <div class="card">
-        <img src="placeholder.png" alt="Place Image" />
-        <div class="info">
-          <p class="name">장소 이름</p>
-          <button class="heart-btn" onclick="toggleFavorite(this)">♡</button>
-        </div>
-      </div>
-      <div class="card">
-        <img src="placeholder.png" alt="Place Image" />
-        <div class="info">
-          <p class="name">장소 이름</p>
-          <button class="heart-btn" onclick="toggleFavorite(this)">♡</button>
-        </div>
-      </div>
-      <div class="card">
-        <img src="placeholder.png" alt="Place Image" />
-        <div class="info">
-          <p class="name">장소 이름</p>
-          <button class="heart-btn" onclick="toggleFavorite(this)">♡</button>
-        </div>
-      </div>
-      <div class="card">
-        <img src="placeholder.png" alt="Place Image" />
-        <div class="info">
-          <p class="name">장소 이름</p>
-          <button class="heart-btn" onclick="toggleFavorite(this)">♡</button>
-        </div>
-      </div>
-    </div>
+      <h2># 반려동물</h2>
+    <div class="Rank" id="rank-container"></div>
 
     <div class="pagination-container">
-      <ul class="pagination">
-        <li class="page-item">
-          <a class="page-link" href="#" aria-label="Previous">
-            <span aria-hidden="true">&laquo;</span>
-          </a>
-        </li>
-        <li class="page-item">
-          <a class="page-link" href="#" data-page="1">1</a>
-        </li>
-        <li class="page-item">
-          <a class="page-link" href="#" data-page="2">2</a>
-        </li>
-        <li class="page-item">
-          <a class="page-link" href="#" data-page="3">3</a>
-        </li>
-        <li class="page-item">
-          <a class="page-link" href="#" aria-label="Next">
-            <span aria-hidden="true">&raquo;</span>
-          </a>
-        </li>
-      </ul>
+        <ul class="pagination">
+            <li class="page-item">
+                <a class="page-link" href="#" aria-label="Previous" data-page="previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            <li class="page-item">
+                <a class="page-link" href="#" data-page="1">1</a>
+            </li>
+            <li class="page-item">
+                <a class="page-link" href="#" data-page="2">2</a>
+            </li>
+            <li class="page-item">
+                <a class="page-link" href="#" data-page="3">3</a>
+            </li>
+            <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next" data-page="next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
     </div>
-
 
     {% include 'footer.html' %}
 
+    <script>
+        let currentPage = 2;
+        const itemsPerPage = 8; // 페이지 당 아이템 수
+
+        async function fetchAttractions(page) {
+            const url = `http://127.0.0.1:8000/get-animal?page=${page}&numOfRows=${itemsPerPage}`;
+            try {
+                const response = await fetch(url);
+                const data = await response.json();
+                const container = document.getElementById('rank-container');
+                container.innerHTML = ''; // 이전 데이터를 초기화
+                data.forEach(attraction => {
+                    const card = document.createElement('div');
+                    card.className = 'box';
+                    card.innerHTML = `
+                        <div class="top">
+                            <img src="${attraction.MAIN_IMG_THUMB}" alt="이미지" class="IMG">
+                            <a href="#" class="heartImg">
+                                <button class="heart-btn" onclick="toggleFavorite(this)">♡</button>
+                            </a>
+                        </div>
+                        <a href="{{ url_for('detail') }}">
+                            <div class="bottom">
+                                <div class="Ttit">${attraction.PLACE}</div>
+                                <div class="Stit">${attraction.ITEMCNTNTS}</div>
+                            </div>
+                        </a>
+                    `;
+                    container.appendChild(card);
+                });
+            } catch (error) {
+                console.error('Error fetching attractions:', error);
+            }
+        }
+
+        function handlePageClick(event) {
+            const page = event.target.getAttribute('data-page');
+            if (page === 'previous' && currentPage > 1) {
+                currentPage--;
+            } else if (page === 'next') {
+                currentPage++;
+            } else if (!isNaN(page)) {
+                currentPage = parseInt(page);
+            }
+
+            fetchAttractions(currentPage);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            fetchAttractions(currentPage); // 초기 페이지 데이터 로드
+
+            document.querySelectorAll('.page-link').forEach(link => {
+                link.addEventListener('click', handlePageClick);
+            });
+        });
+
+        function toggleFavorite(button) {
+            button.classList.toggle('active');
+            button.textContent = button.classList.contains('active') ? '♥' : '♡';
+        }
+        
+    </script>
+
     <script src="script.js"></script>
-  </body>
+</body>
 </html>

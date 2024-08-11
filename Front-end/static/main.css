@@ -237,7 +237,6 @@ h2{
 }
 
 
-
 .box{
   width: 280px;
   height: 400px;
@@ -269,9 +268,12 @@ h2{
 .heart-btn {
   background: none;
   border: none;
-  font-size: 30px;
+  font-size: 25px;
   cursor: pointer;
   color: black;
+}
+.heart-btn.active {
+  color: red;
 }
 
 .Ttit, .Stit{

@@ -1,231 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
     <title>Kkilook : 부산관광은 끼룩</title>
     <script src="https://kit.fontawesome.com/259472804d.js" crossorigin="anonymous"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
-
     <link rel="stylesheet" href="/Front-end/static/main.css">
-  </head>
-  <body>
+</head>
+<body>
     {% include 'header.html' %}
 
     <main>
-      <div class="slidebox">
-        <input type="radio" name="slide" id="slide01" checked />
-        <input type="radio" name="slide" id="slide02" />
-        <input type="radio" name="slide" id="slide03" />
-        <input type="radio" name="slide" id="slide04" />
-        <ul class="slidelist">
-          <li class="slideitem">
-            <div>
-              <label for="slide04" class="left"></label>
-              <label for="slide02" class="right"></label>
-              <a href="#">
-                <img src="https://busandabom.net/upload/%EB%8D%94%ED%85%8C%ED%81%AC.jpg" alt="168 더 테크"/>
-              </a>
-            </div>
-          </li>
-          <li class="slideitem">
-            <div>
-              <label for="slide01" class="left"></label>
-              <label for="slide03" class="right"></label>
-              <a href="#">
-                <img src="https://www.visitbusan.net/upload_data/board_data/BBS_0000009/172077259045930.jpg" alt="FLY 아세안 차세대 감독 영화 상영회"/>
-              </a>
-            </div>
-          </li>
-          <li class="slideitem">
-            <div>
-              <label for="slide02" class="left"></label>
-              <label for="slide04" class="right"></label>
-              <a href="#">
-                <img src="https://www.visitbusan.net/upload_data/board_data/BBS_0000009/172040567441328.jpg" alt="부산국제코미니페스티벌"/>
-              </a>
-            </div>
-          </li>
-          <li class="slideitem">
-            <div>
-              <label for="slide03" class="left"></label>
-              <label for="slide01" class="right"></label>
-              <a href="#">
-                <img src="https://www.visitbusan.net/upload_data/board_data/BBS_0000009/171444031986567.jpg" alt="도라에몽  in Busan"/>
-              </a>
-            </div>
-          </li>
-        </ul>
-      </div>
-
-      <h2># 찜 랭킹</h2>
-        <div class="Rank">
-
-            <a href="{{ url_for('detail') }}" class="Fbox">
-            <div class="box">
-            
-                <div class="top">
-                  <img src="/Front-end/static/img/img.png" alt="" class="IMG">
-                  <a href="#" class="heartImg">
-                    <button class="heart-btn" onclick="toggleFavorite(this)">♡</button> 
-                  </a>
-                </div>
-
-                <a href="{{ url_for('detail') }}">
-                  <div class="bottom">
-                    <div class="Ttit">장소 이름</div>
-                    <div class="Stit">설명</div>
-                  </div>
-                </a>
-            </div>
-            </a>
-            <a href="{{ url_for('detail') }}" class="Fbox">
-            <div class="box">
-            
-                <div class="top">
-                  <img src="/Front-end/static/img/img.png" alt="" class="IMG">
-                  <a href="#" class="heartImg">
-                    <button class="heart-btn" onclick="toggleFavorite(this)">♡</button> 
-                  </a>
-                </div>
-                <a href="{{ url_for('detail') }}">
-                  <div class="bottom">
-                    <div class="Ttit">장소 이름</div>
-                    <div class="Stit">설명</div>
-                  </div>
-                </a>
-            </div>
-            </a>
-
-            <a href="{{ url_for('detail') }}" class="Fbox">
-            <div class="box">
-            
-                <div class="top">
-                  <img src="/Front-end/static/img/img.png" alt="" class="IMG">
-                  <a href="#" class="heartImg">
-                    <button class="heart-btn" onclick="toggleFavorite(this)">♡</button> 
-                  </a>
-                </div>
-
-                <a href="{{ url_for('detail') }}">
-                  <div class="bottom">
-                    <div class="Ttit">장소 이름</div>
-                    <div class="Stit">설명</div>
-                  </div>
-                </a>
-            </div>
-            </a>
-
-            <a href="{{ url_for('detail') }}" class="Fbox">
-            <div class="box">
-            
-                <div class="top">
-                  <img src="/Front-end/static/img/img.png" alt="" class="IMG">
-                  <a href="#" class="heartImg">
-                    <button class="heart-btn" onclick="toggleFavorite(this)">♡</button> 
-                  </a>
-                </div>
-
-                <a href="{{ url_for('detail') }}">
-                  <div class="bottom">
-                    <div class="Ttit">장소 이름</div>
-                    <div class="Stit">설명</div>
-                  </div>
-                </a>
-            </div>
-            </a>
-
-            
-
-
+        <div class="slidebox">
+            <input type="radio" name="slide" id="slide01" checked />
+            <input type="radio" name="slide" id="slide02" />
+            <input type="radio" name="slide" id="slide03" />
+            <input type="radio" name="slide" id="slide04" />
+            <ul class="slidelist">
+                <li class="slideitem">
+                    <div>
+                        <label for="slide04" class="left"></label>
+                        <label for="slide02" class="right"></label>
+                        <a href="#">
+                            <img src="https://busandabom.net/upload/%EB%8D%94%ED%85%8C%ED%81%AC.jpg" alt="168 더 테크"/>
+                        </a>
+                    </div>
+                </li>
+                <li class="slideitem">
+                    <div>
+                        <label for="slide01" class="left"></label>
+                        <label for="slide03" class="right"></label>
+                        <a href="#">
+                            <img src="https://www.visitbusan.net/upload_data/board_data/BBS_0000009/172077259045930.jpg" alt="FLY 아세안 차세대 감독 영화 상영회"/>
+                        </a>
+                    </div>
+                </li>
+                <li class="slideitem">
+                    <div>
+                        <label for="slide02" class="left"></label>
+                        <label for="slide04" class="right"></label>
+                        <a href="#">
+                            <img src="https://www.visitbusan.net/upload_data/board_data/BBS_0000009/172040567441328.jpg" alt="부산국제코미니페스티벌"/>
+                        </a>
+                    </div>
+                </li>
+                <li class="slideitem">
+                    <div>
+                        <label for="slide03" class="left"></label>
+                        <label for="slide01" class="right"></label>
+                        <a href="#">
+                            <img src="https://www.visitbusan.net/upload_data/board_data/BBS_0000009/171444031986567.jpg" alt="도라에몽 in Busan"/>
+                        </a>
+                    </div>
+                </li>
+            </ul>
         </div>
-         
 
-         
-
+        <h2># 부산 유명 축제</h2>
+        <div class="Rank" id="rank-container"></div>
 
         <h2># 끼룩이의 추천</h2>
-        <div class="Tip">
-           <a href="{{ url_for('detail') }}" class="Fbox">
-            <div class="box">
-            
-                <div class="top">
-                  <img src="/Front-end/static/img/img.png" alt="" class="IMG">
-                  <a href="#" class="heartImg">
-                    <button class="heart-btn" onclick="toggleFavorite(this)">♡</button> 
-                  </a>
-                </div>
-
-                <a href="{{ url_for('detail') }}">
-                  <div class="bottom">
-                    <div class="Ttit">장소 이름</div>
-                    <div class="Stit">설명</div>
-                  </div>
-                </a>
-            </div>
-            </a>
-
-            <a href="{{ url_for('detail') }}" class="Fbox">
-              <div class="box">
-              
-                  <div class="top">
-                    <img src="/Front-end/static/img/img.png" alt="" class="IMG">
-                    <a href="#" class="heartImg">
-                      <button class="heart-btn" onclick="toggleFavorite(this)">♡</button>  
-                    </a>
-                  </div>
-  
-                  <a href="{{ url_for('detail') }}">
-                    <div class="bottom">
-                      <div class="Ttit">장소 이름</div>
-                      <div class="Stit">설명</div>
-                    </div>
-                  </a>
-              </div>
-              </a>
-
-              <a href="{{ url_for('detail') }}" class="Fbox">
-                <div class="box">
-                
-                    <div class="top">
-                      <img src="/Front-end/static/img/img.png" alt="" class="IMG">
-                      <a href="#" class="heartImg">
-                        <button class="heart-btn" onclick="toggleFavorite(this)">♡</button>  
-                      </a>
-                    </div>
-    
-                    <a href="{{ url_for('detail') }}">
-                      <div class="bottom">
-                        <div class="Ttit">장소 이름</div>
-                        <div class="Stit">설명</div>
-                      </div>
-                    </a>
-                </div>
-                </a>
-
-                <a href="{{ url_for('detail') }}" class="Fbox">
-                  <div class="box">
-                  
-                      <div class="top">
-                        <img src="/Front-end/static/img/img.png" alt="" class="IMG">
-                        <a href="#" class="heartImg">
-                          <button class="heart-btn" onclick="toggleFavorite(this)">♡</button> 
-                        </a>
-                      </div>
-      
-                      <a href="{{ url_for('detail') }}">
-                        <div class="bottom">
-                          <div class="Ttit">장소 이름</div>
-                          <div class="Stit">설명</div>
-                        </div>
-                      </a>
-                  </div>
-                  </a>
-        </div>
-
+        <div class="Rank" id="cards-container"></div>
     </main>
 
-    {% include 'footer.html' %}
-  </body>
+    <script>
+        async function fetchAttractions(url, containerId) {
+            try {
+                const response = await fetch(url);
+                const data = await response.json();
+                const container = document.getElementById(containerId);
+                data.forEach(attraction => {
+                    const card = document.createElement('div');
+                    card.className = 'box';
+                    card.innerHTML = `
+                        <div class="top">
+                            <img src="${attraction.MAIN_IMG_THUMB}" alt="이미지" class="IMG">
+                            <a href="#" class="heartImg">
+                                <button class="heart-btn" onclick="toggleFavorite(this)">♡</button>
+                            </a>
+                        </div>
+                        <a href="{{ url_for('detail') }}">
+                            <div class="bottom">
+                                <div class="Ttit">${attraction.PLACE}</div>
+                                <div class="Stit">${attraction.ITEMCNTNTS}</div>
+                            </div>
+                        </a>
+                    `;
+                    container.appendChild(card);
+                });
+            } catch (error) {
+                console.error('Error fetching attractions:', error);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            fetchAttractions('http://127.0.0.1:8000/get-attractions', 'rank-container'); // 축제 데이터
+            fetchAttractions('http://127.0.0.1:8000/get-recommmend', 'cards-container'); // 끼룩이의 추천 데이터
+        });
+
+        function toggleFavorite(button) {
+            button.classList.toggle('active');
+            button.textContent = button.classList.contains('active') ? '♥' : '♡';
+        }
+        
+    </script>
+        {% include 'footer.html' %}
+</body>
 </html>

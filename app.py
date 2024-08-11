@@ -44,7 +44,6 @@ def withchild():
 def alone():
     return render_template('alone.html')
 
-
 @app.route("/date")
 def date():
     return render_template('date.html')
@@ -53,6 +52,5 @@ def date():
 def animal():
     return render_template('animal.html')
 
-
-# if __name__ == '__main__':
-#     app.run(debug=True, port=5001)
+if __name__ == '__main__':
+    app.run(debug=True, port=5001)
