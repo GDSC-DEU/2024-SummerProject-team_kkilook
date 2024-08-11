@@ -1,0 +1,144 @@
+/* 전체 페이지 레이아웃 설정 */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* 수직 방향으로 배치 */
+    min-height: 100vh; /* 페이지 전체 높이 */
+    width: 100%; /* 헤더가 페이지 전체 너비를 차지하도록 설정 */
+}
+
+/* 헤더 스타일 */
+header {
+    background-color: #3c8dbc;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 메인 콘텐츠 스타일 */
+main {
+    flex: 1; /* 헤더와 푸터를 제외한 나머지 공간을 차지함 */
+    padding: 20px;
+    width: 100%; /* 메인 콘텐츠가 페이지 전체 너비를 차지하도록 설정 */
+    box-sizing: border-box; /* 패딩을 포함한 너비 계산 */
+}
+
+/* 기상 정보 제목 스타일 */
+.weather-title {
+    font-size: 39px;
+    color: #3c8dbc;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.weather-description {
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* 기상 정보 카드 스타일 */
+.weather-container {
+    display: grid;
+    grid-template-columns: 1fr; /* 한 줄에 하나의 카드만 표시 */
+    gap: 20px;
+    max-width: 600px; /* 카드가 너무 넓지 않도록 최대 너비 설정 */
+    margin: auto; /* 중앙 정렬 */
+}
+
+/* 날씨 카드 스타일 */
+.weather-card {
+    background-color: #3c8dbc;
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.weather-card img {
+    width: 50px;
+    height: 50px;
+}
+
+.weather-card .temperature {
+    font-size: 2rem;
+    margin: 10px 0;
+}
+
+.weather-card .description {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.weather-card .city {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.weather-card .details {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.details div {
+    font-size: 1rem;
+}
+
+/* 푸터 스타일 */
+footer {
+    background-color: #e0e0e0;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer p {
+    margin: 0;
+    color: #333;
+}
+
+.contributors {
+    text-align: left;
+}
+
+.contributors ul {
+    list-style: none;
+    padding: 50px;
+    margin: 10px;
+}
+
+.contributors ul li {
+    color: #333;
+}
+
+.gdsc-logo img {
+    max-height: 60px;
+    margin-bottom: 15px;
+    margin-left: 300px;
+}
+
+@media (max-width: 600px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contributors {
+        text-align: center;
+    }
+}
