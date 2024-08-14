@@ -1,7 +1,7 @@
 /* 전체 페이지 레이아웃 설정 */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
+    background-color: #fff;
     margin: 0;
     padding: 0;
     display: flex;
@@ -12,11 +12,11 @@ body {
 
 /* 헤더 스타일 */
 header {
-    background-color: #3c8dbc;
+    background-color: #fff;
     color: white;
     padding: 10px 0;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
 }
 
 /* 메인 콘텐츠 스타일 */
